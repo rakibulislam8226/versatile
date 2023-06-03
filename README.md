@@ -6,15 +6,15 @@
  * All the common setup guide
 
 ---
-**Copy .env.example file to .env:**
+**Copy .example.env file to .env:**
 
   * For linux
     ```shell
-    cp .env.example .env
+    cp .example.env .env
     ```
   * For windows
     ```shell
-    copy .env.example .env
+    copy .example.env .env
     ```
 
 ---

@@ -43,6 +43,8 @@ DEFAULT_APPS = [
 
     #default from packages
     'rest_framework',
+    'multiselectfield',
+    'drf_yasg',
 ]
 
 CUSTOMS_INSTALL_APPS = [
@@ -151,6 +153,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
 }
 
+# AUTH_USER_MODEL = 'accounts.AdminUser'
 
 APP_SITE_HEADER = "Jana"
 APP_SITE_TITLE = os.getenv('APP_SITE_TITLE', 'Working Personal Portal')

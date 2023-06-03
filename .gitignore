@@ -5,5 +5,6 @@ venv
 
 *.pyc
 src/*/__pycache__/
+src/*/*/__pycache__/
 *.py[cod]
 *$py.class

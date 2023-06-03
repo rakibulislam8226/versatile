@@ -1,6 +1,7 @@
-from django.urls import path, include
+from django.urls import path
+from .views import AdminUserView
 
 
 urlpatterns = [
-  # path('accounts/', include('accounts.urls')),
+  path('admin-users/', AdminUserView.as_view(), name='admin-users'),
 ]
