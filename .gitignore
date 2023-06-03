@@ -1,0 +1,9 @@
+.idea
+.env
+env
+venv
+
+*.pyc
+src/*/__pycache__/
+*.py[cod]
+*$py.class
