@@ -33,14 +33,25 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+DEFAULT_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    #default from packages
+    'rest_framework',
 ]
+
+CUSTOMS_INSTALL_APPS = [
+    "accounts",
+
+]
+
+INSTALLED_APPS = list(DEFAULT_APPS) + [app for app in CUSTOMS_INSTALL_APPS if app not in DEFAULT_APPS]
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -86,17 +97,6 @@ DATABASES = {
         'PORT':  os.getenv('POSTGRES_PORT'),
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ.get('POSTGRES_DB'),
-#         'USER': os.environ.get('POSTGRES_USER'),
-#         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-#         'HOST':  os.environ.get('POSTGRES_HOST'),
-#         'PORT':  os.environ.get('POSTGRES_PORT'),
-#     }
-# }
 
 
 # Password validation
